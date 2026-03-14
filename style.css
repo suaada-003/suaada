@@ -170,13 +170,14 @@ width: 220px;
 }
 
 .inventory-card {
-    background: #fff;
-    border-radius: 15px;
-    padding: 1.5rem;
+    background: rgba(238, 232, 170, 0.226);
+    border-radius: 20px;
+    padding: 1.8rem 1.5rem;
     width: 220px;
     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
     text-align: left;
     transition: transform 0.3s, box-shadow 0.3s;
+    color: grey;
 }
 
 .inventory-card h3 {
