@@ -257,22 +257,104 @@ width: 220px;
         align-items: center;
     }
 
+    .inventory-grid{
+flex-direction:column;
+align-items:center;
+}
     .card {
-        width: 80%;
+        width: 90%;
     }
 
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 26px;
     }
 
     .hero h2 {
-        font-size: 1.5rem;
+        font-size: 20px;
     }
 }
 
 
-
-
-
-
 /*end of section 2 */
+
+
+
+/* section 3 supply tracking */
+
+.supply-tracking{
+padding:70px 20px;
+background:#fafafa;
+text-align:center;
+}
+
+.supply-tracking h2{
+font-size:2.5rem;
+color:#444;
+margin-bottom:10px;
+}
+
+.supply-tracking p{
+color:#777;
+margin-bottom:40px;
+}
+
+.tracking-list{
+max-width:800px;
+margin:auto;
+}
+
+.tracking-item{
+display:flex;
+align-items:flex-start;
+gap:20px;
+margin-bottom:30px;
+}
+
+/* circle indicator */
+
+.tracking-circle{
+width:18px;
+height:18px;
+border-radius:50%;
+margin-top:8px;
+}
+
+/* status colors */
+
+.shipped{
+background:#20c997;
+}
+
+.transit{
+background:#0dcaf0;
+}
+
+.pending{
+background:#ffc107;
+}
+
+/* details */
+
+.tracking-details{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 6px 12px rgba(0,0,0,0.08);
+text-align:left;
+width:100%;
+}
+
+.tracking-details h3{
+color:#20c997;
+margin-bottom:8px;
+}
+
+.tracking-label{
+display:inline-block;
+margin-top:10px;
+font-size:13px;
+font-weight:600;
+color:#555;
+}
+
+
