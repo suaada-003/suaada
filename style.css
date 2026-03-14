@@ -279,13 +279,6 @@ align-items:center;
 
 /* Section 3 - Supply Tracking */
 
-
-.supply-tracking {
-  padding:60px 20px;
-  background:#f0f8ff;
-  text-align:center;
-}
-
 .supply-tracking h2 {
   font-size:2.2rem;
   color:#444;
