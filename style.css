@@ -69,9 +69,179 @@ text-decoration: none;
 
 
 .hero{
+    min-height: 87vh;
 text-align: center;
 padding: 80px 20px;
 background: url(logo.jpg);
 background-size: cover;
+background-position: center;
 }
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: brown;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+
 /*end of hero*/
+
+/*section 2*/
+
+/* Dashboard Header */
+.dashboard-header {
+    text-align: center;
+    margin: 3rem 0 2rem 0;
+}
+
+.dashboard-header h1 {
+    font-size: 3.0rem;
+    margin-bottom: 20px;
+    color: gray;
+}
+
+.dashboard-header p {
+    font-size: 2.0rem;
+    color: wheat;
+}
+
+/* Summary Cards */
+.dashboard-summary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.0rem;
+    margin: 3rem 1rem;
+}
+
+.card {
+    background: linear-gradient(135deg, #20c997, grey); /* soft modern gradient */
+    border-radius: 20px;
+    padding: 1.8rem 1.5rem;
+width: 220px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: wheat;
+}
+
+.card h2 {
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.card p {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+/* Inventory Cards */
+.inventory-cards {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.inventory-cards h2 {
+    font-size: 2rem;
+    color: grey;
+    margin-bottom: 1.5rem;
+}
+
+.inventory-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.inventory-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    width: 220px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.inventory-card h3 {
+    color: #20c997;
+    margin-bottom: 0.5rem;
+}
+
+.inventory-card p {
+    margin: 0.4rem 0;
+}
+
+.status {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.status.available {
+    background-color: #28a74533;
+    color: #28a745;
+}
+
+.status.low-stock {
+    background-color: #ffc10733;
+    color: #ffc107;
+}
+
+.status.expired {
+    background-color: #dc354533;
+    color: #dc3545;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .inventory-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .dashboard-summary {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+
+/*end of section 2 */
