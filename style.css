@@ -279,11 +279,7 @@ align-items:center;
 
 /* Section 3 - Supply Tracking */
 
-.supply-tracking {
-    padding: 60px 20px;
-    background: url('image1.avif') no-repeat center center;
-    background-size: cover;
-}
+
 
 .supply-tracking {
   padding:60px 20px;
