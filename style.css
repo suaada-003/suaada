@@ -277,136 +277,213 @@ align-items:center;
 
 /*end of section 2 */
 
+/* Section 3 - Supply Tracking */
 
-/*section3*/
+.supply-tracking {
+    padding: 60px 20px;
+    background: url('image1.avif') no-repeat center center;
+    background-size: cover;
+}
 
-/* -----------------------------
-   Section 3 - Interactive Supply Tracking
----------------------------------*/
-.supply-tracking{
+.supply-tracking {
   padding:60px 20px;
-  background:#e9f7f7; /* distinct from inventory section */
+  background:#f0f8ff;
   text-align:center;
 }
 
-.supply-tracking h2{
+.supply-tracking h2 {
   font-size:2.2rem;
   color:#444;
   margin-bottom:10px;
 }
 
-.supply-tracking p{
+.supply-tracking p {
   color:#555;
   margin-bottom:40px;
 }
 
-/* Horizontal scrollable container for mobile */
-.tracking-container{
+/* Status Summary */
+.tracking-summary {
   display:flex;
-  flex-wrap:nowrap;
-  overflow-x:auto;
-  gap:20px;
-  padding-bottom:10px;
   justify-content:center;
+  gap:30px;
+  margin-bottom:40px;
+  flex-wrap:wrap;
 }
 
-/* scrollbar styling */
-.tracking-container::-webkit-scrollbar{
-  height:6px;
-}
-
-.tracking-container::-webkit-scrollbar-thumb{
+.summary-card {
   background:#20c997;
-  border-radius:3px;
-}
-
-/* Card styling */
-.tracking-card{
-  flex:0 0 auto; /* prevent shrinking in horizontal layout */
-  background: linear-gradient(135deg, #0dcaf0, #20c997);
-  border-radius:20px;
-  padding:20px;
-  width:220px;
   color:white;
+  padding:20px 25px;
+  border-radius:15px;
+  min-width:140px;
   box-shadow:0 8px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summary-card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 12px 20px rgba(0,0,0,0.15);
+}
+
+.summary-card h3 {
+  font-size:1rem;
+  margin-bottom:10px;
+}
+
+.summary-card p {
+  font-size:1.5rem;
+  font-weight:bold;
+}
+
+/* Orders Container */
+.orders-container {
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+/* Order Card */
+.order-card {
+  background:white;
+  width:280px;
+  border-radius:15px;
+  padding:20px;
   text-align:left;
+  box-shadow:0 8px 15px rgba(0,0,0,0.1);
+  transition:transform 0.3s, box-shadow 0.3s;
   cursor:pointer;
+  margin-bottom:30px;
 }
 
-/* Hover effects */
-.tracking-card:hover{
-  transform: translateY(-8px) scale(1.05);
-  box-shadow:0 15px 25px rgba(0,0,0,0.2);
-  background: linear-gradient(135deg, #20c997, #0dcaf0); /* gradient shift */
+.order-card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 12px 20px rgba(0,0,0,0.15);
 }
 
-/* Card text */
-.tracking-card h3{
+.order-card h3 {
+  color:#0dcaf0;
   margin-bottom:8px;
-  font-size:1.2rem;
 }
 
-.tracking-card p{
+.order-card p {
+  font-size:0.9rem;
   margin:4px 0;
-  font-size:0.95rem;
 }
 
-/* Status badges */
-.tracking-status{
-  display:inline-block;
-  margin-top:10px;
-  padding:5px 10px;
-  border-radius:12px;
-  font-weight:600;
-  font-size:0.85rem;
-  transition: transform 0.3s ease;
+
+
+/* ===== Flat Style Overrides for Section 3 ===== */
+.summary-card {
+  background: transparent;
+  color: #20c997;
+  padding: 10px 0;
+  border-radius: 0;
+  box-shadow: none;
+  min-width: 140px;
+  transition: none;
 }
 
-/* Status colors */
-.shipped{
-  background:#198754;
-  color:white;
+.summary-card:hover {
+  transform: none;
+  box-shadow: none;
 }
 
-.transit{
+.order-card {
+  background: transparent;
+  border-radius: 0;
+  padding: 10px 0;
+  text-align: left;
+  box-shadow: none;
+  transition: none;
+}
+
+
+
+
+/* Horizontal Progress Tracker */
+.progress-bar {
+  position: relative; /* crucial for absolute line */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top:20px;
+  min-width: 100px;
+}
+
+/* Full line */
+.progress-line {
+  position:absolute;
+  top:50%;
+  left:0;
+  right:0;
+  height:4px;
+  background:#ccc;
+  border-radius:2px;
+  z-index:0;
+  transform:translateY(-50%);
+}
+
+/* Filled portion */
+.progress-fill {
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
   background:#0dcaf0;
-  color:#004085;
+  border-radius:2px;
+  z-index:0;
 }
 
-.pending{
+/* Stage markers */
+.progress-stage {
+  position: relative;
+  z-index:1;
+  text-align:center;
+  font-size:0.85rem;
+}
+
+.progress-stage::after {
+  content:"";
+  display:block;
+  width:16px;
+  height:16px;
+  margin:0 auto 5px auto;
+  border-radius:50%;
+  background:#ccc;
+}
+
+.progress-stage.completed::after {
+  background:#0dcaf0;
+}
+
+.progress-stage.current::after {
   background:#ffc107;
-  color:#664d03;
-  animation: pulse 2s infinite;
 }
 
-/* pulse animation for pending */
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+.progress-stage.upcoming::after {
+  background:#aaa;
 }
 
-/* -----------------------------
-   Responsive for Mobile
----------------------------------*/
-@media (max-width:768px){
-  .tracking-container{
-    flex-wrap:nowrap; /* keep horizontal scroll */
-    justify-content:flex-start;
+/* Mobile Responsive */
+@media(max-width:768px){
+  .tracking-summary {
+    flex-direction:column;
+    align-items:center;
   }
 
-  .tracking-card{
-    width:200px;
+  .orders-container {
+    flex-direction:column;
+    align-items:center;
   }
 
-  .supply-tracking h2{
-    font-size:1.8rem;
+  .order-card {
+    width:90%;
   }
 
-  .supply-tracking p{
-    font-size:0.95rem;
-    margin-bottom:30px;
+  .summary-card {
+    width:80%;
   }
 }
-/*end of section3*/
+

@@ -122,7 +122,9 @@
     
 
 
-<!-- Section 3: Supply Tracking Dashboard -->
+
+
+<!-- Section 3 - Supply Tracking -->
 <section class="supply-tracking">
   <h2>Supply Tracking</h2>
   <p>Monitor active orders from KEMSA to General Hospital Isiolo.</p>
@@ -143,42 +145,54 @@
     </div>
   </div>
 
-  <!-- Orders List -->
+  <!-- Orders -->
   <div class="orders-container">
 
+    <!-- Order 1 -->
     <div class="order-card">
       <h3>KEM-ORD-2024-912</h3>
-      <span class="order-status dispatched">Dispatched</span>
       <p>Ordered on: Oct 24, 2024 • Antimalarials & Antibiotics</p>
       <p><strong>Estimated Arrival:</strong> Oct 26, 2024</p>
-      <div class="order-stages">
-        <span class="stage processing">Processing</span>
-        <span class="stage dispatched">Dispatched</span>
-        <span class="stage delivered">Delivered</span>
+
+      <div class="progress-bar">
+        <div class="progress-line">
+          <div class="progress-fill" style="width:66%;"></div>
+        </div>
+        <div class="progress-stage completed">Processing</div>
+        <div class="progress-stage current">Dispatched</div>
+        <div class="progress-stage upcoming">Delivered</div>
       </div>
     </div>
 
+    <!-- Order 2 -->
     <div class="order-card">
       <h3>KEM-ORD-2024-915</h3>
-      <span class="order-status processing">Processing</span>
       <p>Ordered on: Oct 25, 2024 • Laboratory Reagents</p>
       <p><strong>Estimated Arrival:</strong> Oct 29, 2024</p>
-      <div class="order-stages">
-        <span class="stage processing">Processing</span>
-        <span class="stage dispatched">Dispatched</span>
-        <span class="stage delivered">Delivered</span>
+
+      <div class="progress-bar">
+        <div class="progress-line">
+          <div class="progress-fill" style="width:33%;"></div>
+        </div>
+        <div class="progress-stage current">Processing</div>
+        <div class="progress-stage upcoming">Dispatched</div>
+        <div class="progress-stage upcoming">Delivered</div>
       </div>
     </div>
 
+    <!-- Order 3 -->
     <div class="order-card">
       <h3>KEM-ORD-2024-892</h3>
-      <span class="order-status delivered">Delivered</span>
       <p>Ordered on: Oct 15, 2024 • Surgical Consumables</p>
       <p><strong>Estimated Arrival:</strong> Delivered on Oct 22</p>
-      <div class="order-stages">
-        <span class="stage processing">Processing</span>
-        <span class="stage dispatched">Dispatched</span>
-        <span class="stage delivered">Delivered</span>
+
+      <div class="progress-bar">
+        <div class="progress-line">
+          <div class="progress-fill" style="width:100%;"></div>
+        </div>
+        <div class="progress-stage completed">Processing</div>
+        <div class="progress-stage completed">Dispatched</div>
+        <div class="progress-stage completed">Delivered</div>
       </div>
     </div>
 
