@@ -11,3 +11,38 @@
 }
 
 /* end of common styles */
+
+/*navbar*/
+.navbar{
+    width: 100%;
+height: 130px;
+background-color: #0b6fa4;
+text-decoration: none;
+}
+
+.nav-logo {
+  position: absolute;
+  top: 1.0rem;
+  left: 3rem;
+}
+
+.nav-logo a {
+  font-family: sans-serif;
+  font-size: 2rem;
+  color: #eee;
+  letter-spacing: 0.1rem;
+}
+
+.nav-logo span {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00bfa5;
+  font-family: "MADE Soulmaze";
+}
+
+
+
+
+
+
+/*end of navbar*/
