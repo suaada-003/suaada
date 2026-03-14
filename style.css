@@ -97,6 +97,8 @@ margin-top:10px;
 
 
 .hero{
+    width:100%;
+overflow:hidden;
     min-height: 87vh;
 text-align: center;
 padding: 80px 20px;
