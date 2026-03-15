@@ -283,11 +283,13 @@ align-items:center;
   font-size:2.2rem;
   color:#444;
   margin-bottom:10px;
+  text-align: center;
 }
 
 .supply-tracking p {
   color:#555;
   margin-bottom:40px;
+  text-align: center;
 }
 
 /* Status Summary */
