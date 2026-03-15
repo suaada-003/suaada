@@ -129,6 +129,9 @@ background-position: center;
 /*section 2*/
 
 /* Dashboard Header */
+.dashboard{
+    background: rgba(0, 128, 128, 0.192);
+}
 .dashboard-header {
     text-align: center;
     margin: 3rem 0 2rem 0;
@@ -147,6 +150,7 @@ background-position: center;
 
 /* Summary Cards */
 .dashboard-summary {
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -182,6 +186,7 @@ width: 220px;
 
 /* Inventory Cards */
 .inventory-cards {
+    background: rgba(222, 184, 135, 0.295);
     padding: 2rem 1rem;
     text-align: center;
 }
@@ -280,7 +285,7 @@ align-items:center;
 /* Section 3 - Supply Tracking */
 
 .supply-tracking {
-    background: rgba(210, 180, 140, 0.288);
+    background: rgba(64, 224, 208, 0.048);
 }
 
 .supply-tracking h2 {
